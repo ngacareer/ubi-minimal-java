@@ -19,7 +19,7 @@ LABEL name="ubi-mininal-java" \
 ENV JAVA_VERSION 14
 
 RUN  microdnf update -y \
-     && microdnf install -y openssl java-$JAVA_VERSION-openjdk-devel vim-enhanced curl gzip tar \
+     && microdnf install -y openssl java-$JAVA_VERSION-openjdk-devel vim-enhanced \
      && microdnf clean all
 
 ENV JAVA_HOME=/usr/lib/jvm/jre-openjdk
