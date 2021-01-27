@@ -11,12 +11,12 @@ FROM registry.redhat.io/ubi8/ubi-minimal:latest
 
 
 LABEL name="ubi-mininal-java" \
-    version="14" \
+    version="11" \
     io.openshift.tags="base, openssl, curl,openjdk-dev" \
     io.k8s.description="OpenJDK base image providing java SDK" \
-    io.k8s.display-name="Java 14"
+    io.k8s.display-name="Java 11"
 
-ENV JAVA_VERSION 14
+ENV JAVA_VERSION 11
 
 RUN  microdnf update -y \
      && microdnf install -y openssl java-$JAVA_VERSION-openjdk-devel vim-enhanced \
