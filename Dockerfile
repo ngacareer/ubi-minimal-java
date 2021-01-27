@@ -9,6 +9,13 @@
 
 FROM registry.redhat.io/ubi8/ubi-minimal:latest
 
+
+LABEL name="ubi-mininal-java" \
+    version="1.8.0" \
+    io.openshift.tags="base, openssl, curl,openjdk-dev" \
+    io.k8s.description="OpenJDK base image providing java SDK" \
+    io.k8s.display-name="Java 8"
+
 ENV JAVA_VERSION 1.8.0
 
 RUN  microdnf update -y \
