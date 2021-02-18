@@ -37,3 +37,8 @@ oc exec -it $(oc get pod -l app=ubi-minimal-java -o jsonpath="{.items[0].metadat
 $ java -version
 $ javac -version
  ```
+## License
+
+Copyright © 2021 Ngacareer
+
+All contents licensed under the [MIT License](LICENSE)
